@@ -1,0 +1,71 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Navigation bar */
+nav {
+  margin-bottom: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  margin-right: 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #007acc;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+/* Headshot image */
+.headshot {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Contact information box */
+.contact-info {
+  margin-top: 20px;
+  background-color: #eef2f3;
+  padding: 10px;
+  border-left: 5px solid #2c3e50;
+}
+
+/* Section padding */
+section {
+  margin-bottom: 30px;
+}
+
+/* List styling */
+ul {
+  padding-left: 20px;
+}
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Resume PDF iframe */
+iframe {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+}
