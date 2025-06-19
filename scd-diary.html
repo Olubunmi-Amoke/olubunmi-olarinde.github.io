@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Sickle Cell Diary App</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>Smart Sickle Cell Diary App (Capstone)</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="resume.html">Resume</a> |
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Project Overview</h2>
+    <p>Sickle Cell Disease (SCD) patients often experience unpredictable and intense pain episodes. Traditional pain tracking tools can be rigid or unintuitive. In this project, first steps are taken towards addressing that gap by allowing patients to log their experiences using natural language and structured inputs, which is then analyzed using machine learning and NLP models to provide personalized feedback. Ultimately, the Smart SCD Diary aims to support patient self-awareness, proactive symptom management, and communication with healthcare providers.</p>
+  </section>
+
+  <section>
+    <h2>Approach</h2>
+    <ul>
+      <li><strong>Data:</strong> Simulated patient logs generated with Azure Health Bot to mimic real-world SCD patient conversations.</li>
+      <li><strong>Pipeline:</strong> Text preprocessed and analyzed using TF-IDF and TextBlob</li>
+      <li><strong>Modeling:</strong> Two separate models predict Pain Level (regression) and Emotion (classification).</li>
+      <li><strong>Dashboard:</strong> Streamlit app visualizes trends and helps identify patterns in pain and mood episodes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Results & Ethics</h2>
+    <p>The app successfully identifies pain-emotion patterns and offers user-friendly charts to support user reflection and insight. Ethical considerations like model interpretability, controllability, and bias awareness were emphasized throughout the project to ensure more equitable ML-driven healthcare insights.</p>
+    <p>⚠️<strong>Beta Version:</strong>The app is still a work in progress. Future iterations will de-emphasize pain and emotion predictions and instead focus on detecting potential pain triggers and offering supportive, context-aware recommendations to help users better manage their condition.</p> 
+</section>
+
+  <section>
+    <h2>App Access</h2>
+    <p>
+      🌐 <strong>Try the App Live:</strong> <a href="https://scdmvp-pu4xhfajmjvtvncuyz2bcw.streamlit.app" target="_blank" rel="noopener noreferrer">Launch Demo</a>
+    </p>
+    <p>
+      <strong>Run Locally:</strong> Clone the repo and run <code>streamlit run streamlit_app.py</code> to explore the app.
+    </p>
+    <p>
+      <strong>GitHub Repository:</strong> 
+      <a href="https://github.com/Olubunmi-Amoke/SCD_MVP.git" target="_blank">View Source Code</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Screenshots</h2>
+    <img src="assets/screenshots/scd_input_ui_1.jpg" alt="Symptom Entry UI" width="500">
+    <img src="assets/screenshots/scd_input_ui_2.jpg" alt="Symptom Entry UI" width="500">
+    <img src="assets/screenshots/emotion_distribution.jpg" alt="Emotion Distribution" width="500">
+    <img src="assets/screenshots/pain_level_trend.jpg" alt="Pain Level Trend" width="500">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Olubunmi Olarinde</p>
+  </footer>
+</body>
+</html>
