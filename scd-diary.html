@@ -21,7 +21,7 @@
     <p>
       People living with Sickle Cell Disease (SCD) often face unpredictable, intense pain episodes. 
       Traditional trackers can be rigid or unintuitive. 
-      This project enables quick daily logging (free-text + light structure) and uses NLP/ML to surface <strong>useful, actionable insights</strong>—supporting self-awareness, proactive self-management, and clearer conversations with care teams.
+      This project enables quick daily logging (free-text + light structure) and uses NLP/ML to surface <strong>useful, actionable insights</strong>, supporting self-awareness, proactive self-management, and clearer conversations with care teams.
     </p>
     <p><em><strong>What’s new (Aug 2025):</strong> The app now prioritizes <strong>trigger detection</strong> and <strong>supportive, context-aware recommendations</strong> over raw prediction scores.</em></p>
   </section>
@@ -37,10 +37,12 @@
   <section>
     <h2>Approach (Current)</h2>
     <ul>
-      <li><strong>Data:</strong> In-house synthetic diary logs (hand-authored + prompt-generated) crafted to approximate real SCD language and scenarios.</li>
-      <li><strong>Pipeline:</strong> Text preprocessing + cue/semantic matching for trigger detection; optional lightweight RAG surfaces supportive tips with brief attributions.</li>
-      <li><strong>Modeling (legacy):</strong> Earlier TF-IDF/TextBlob features supported pain/emotion prediction; these are now secondary to the trigger-&gt;insight workflow.</li>
-      <li><strong>App UX:</strong> An <em>Insight Card</em> highlights likely triggers and next-best actions; daily logging takes ~1–3 minutes.</li>
+      <li><strong>Data:</strong> No longer limited to synthetic logs—now includes entries from a mini‑pilot with real SCD patient testers (de‑identified for privacy). 
+        Prompt‑generated supportive suggestions are still derived from curated documentation assembled for RAG reference.</li>
+      <li><strong>Pipeline:</strong> The system still applies light text preprocessing to normalize inputs before running trigger detection and generating supportive insights. 
+        These functions are coordinated across the main application (<code>streamlit_app.py</code>), RAG helper routines (<code>rag_integration.py</code>), and trigger detection logic.</li>
+      <li><strong>App UX:</strong> An <em>Insight Card</em> summarizes triggers and next‑best actions; lightweight charts provide optional visualization for reflection. 
+        Users can also <strong>download their log entries as CSV files</strong> for personal record‑keeping or to share with providers. Daily logging remains a quick ~2-5 minute process.</li>
     </ul>
   </section>
 
@@ -48,7 +50,7 @@
     <h2>Results &amp; Ethics</h2>
     <p>
       The app improves reflection by surfacing likely triggers and practical next steps rather than only showing scores. 
-      Ethical considerations: interpretability, controllability, and bias awareness, guide the design to support more equitable ML-driven insights.
+      Ethical considerations (interpretability, controllability, and bias awareness) guide the design to support more equitable ML-driven insights.
     </p>
     <p>
       <span role="img" aria-label="warning">⚠️</span>
@@ -73,30 +75,16 @@
 
   <section>
     <h2>Screenshots</h2>
-    <figure>
-      <img src="assets/screenshots/ScreenShot_1.jpg" alt="Log-In Page" width="500" />
-    </figure>
-    <figure>
-      <img src="assets/screenshots/ScreenShot_2.jpg" alt="Log an Entry" width="500" />
-    </figure>
-    <figure>
-      <img src="assets/screenshots/ScreenShot_3.jpg" alt="Insights and Recommendations after submitting an entry (LLM enabled)" width="500" />
-    </figure>
-    <figure>
-      <img src="assets/screenshots/ScreenShot_4.jpg" alt="Record Feedback" width="500" />
-    </figure>
-    <figure>
-      <img src="assets/screenshots/ScreenShot_5.jpg" alt="Dashboard Overview – Pain Level Trend" width="500" />
-    </figure>
-    <figure>
-      <img src="assets/screenshots/ScreenShot_6.jpg" alt="Dashboard Overview – Emotion Distribution" width="500" />
-    </figure>
-    <figure>
-      <img src="assets/screenshots/ScreenShot_7.jpg" alt="Dashboard – Insight Archive" width="500" />
-    </figure>
-    <figure>
-      <img src="assets/screenshots/ScreenShot_8.jpg" alt="Download Log Entries" width="500" />
-    </figure>
+    <div class="screenshot-gallery">
+      <img src="assets/screenshots/ScreenShot_1.jpg" alt="Log-In Page" />
+      <img src="assets/screenshots/ScreenShot_2.jpg" alt="Log an Entry" />
+      <img src="assets/screenshots/ScreenShot_3.jpg" alt="Insights and Recommendations after submitting an entry (LLM enabled)" />
+      <img src="assets/screenshots/ScreenShot_4.jpg" alt="Record Feedback" />
+      <img src="assets/screenshots/ScreenShot_5.jpg" alt="Dashboard Overview – Pain Level Trend" />
+      <img src="assets/screenshots/ScreenShot_6.jpg" alt="Dashboard Overview – Emotion Distribution" />
+      <img src="assets/screenshots/ScreenShot_7.jpg" alt="Dashboard – Insight Archive" />
+      <img src="assets/screenshots/ScreenShot_8.jpg" alt="Download Log Entries" />
+    </div>
   </section>
 
   <section>
