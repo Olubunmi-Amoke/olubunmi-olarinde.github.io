@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Smart Sickle Cell Diary App</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <header>
@@ -17,45 +18,92 @@
 
   <section>
     <h2>Project Overview</h2>
-    <p>Sickle Cell Disease (SCD) patients often experience unpredictable and intense pain episodes. Traditional pain tracking tools can be rigid or unintuitive. In this project, first steps are taken towards addressing that gap by allowing patients to log their experiences using natural language and structured inputs, which is then analyzed using machine learning and NLP models to provide personalized feedback. Ultimately, the Smart SCD Diary aims to support patient self-awareness, proactive symptom management, and communication with healthcare providers.</p>
+    <p>
+      People living with Sickle Cell Disease (SCD) often face unpredictable, intense pain episodes. 
+      Traditional trackers can be rigid or unintuitive. 
+      This project enables quick daily logging (free-text + light structure) and uses NLP/ML to surface <strong>useful, actionable insights</strong>—supporting self-awareness, proactive self-management, and clearer conversations with care teams.
+    </p>
+    <p><em><strong>What’s new (Aug 2025):</strong> The app now prioritizes <strong>trigger detection</strong> and <strong>supportive, context-aware recommendations</strong> over raw prediction scores.</em></p>
   </section>
 
   <section>
-    <h2>Approach</h2>
+    <h2>Evolution of the Project</h2>
     <ul>
-      <li><strong>Data:</strong> Simulated patient logs generated with Azure Health Bot to mimic real-world SCD patient conversations.</li>
-      <li><strong>Pipeline:</strong> Text preprocessed and analyzed using TF-IDF and TextBlob.</li>
-      <li><strong>Modeling:</strong> Two separate models predict Pain Level (regression) and Emotion (classification).</li>
-      <li><strong>Dashboard:</strong> Streamlit app visualizes trends and helps identify patterns in pain and mood episodes.</li>
+      <li><strong>Initial Focus (v1):</strong> Predict <em>Pain Level</em> (regression) and <em>Emotion</em> (classification) from diary entries; visualize pain–mood patterns.</li>
+      <li><strong>New Direction (v2 – Current):</strong> Detect <em>potential triggers</em> (e.g., cold exposure, dehydration, stress, exertion, infection cues) from natural-language logs and provide <em>supportive insights & recommendations</em> (hydration/warmth/rest strategies, journaling prompts, provider-ready notes). Charts remain, but numeric predictions are de-emphasized in favor of actionable guidance.</li>
     </ul>
   </section>
 
   <section>
-    <h2>Results & Ethics</h2>
-    <p>The app successfully identifies pain-emotion patterns and offers user-friendly charts to support user reflection and insight. Ethical considerations like model interpretability, controllability, and bias awareness were emphasized throughout the project to ensure more equitable ML-driven healthcare insights.</p>
-    <p>⚠️<strong>Beta Version:</strong>The app is still a work in progress. Future iterations will de-emphasize pain and emotion predictions and instead focus on detecting potential pain triggers and offering supportive, context-aware recommendations to help users better manage their condition.</p> 
-</section>
+    <h2>Approach (Current)</h2>
+    <ul>
+      <li><strong>Data:</strong> In-house synthetic diary logs (hand-authored + prompt-generated) crafted to approximate real SCD language and scenarios.</li>
+      <li><strong>Pipeline:</strong> Text preprocessing + cue/semantic matching for trigger detection; optional lightweight RAG surfaces supportive tips with brief attributions.</li>
+      <li><strong>Modeling (legacy):</strong> Earlier TF-IDF/TextBlob features supported pain/emotion prediction; these are now secondary to the trigger-&gt;insight workflow.</li>
+      <li><strong>App UX:</strong> An <em>Insight Card</em> highlights likely triggers and next-best actions; daily logging takes ~1–3 minutes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Results &amp; Ethics</h2>
+    <p>
+      The app improves reflection by surfacing likely triggers and practical next steps rather than only showing scores. 
+      Ethical considerations: interpretability, controllability, and bias awareness, guide the design to support more equitable ML-driven insights.
+    </p>
+    <p>
+      <span role="img" aria-label="warning">⚠️</span>
+      <strong>Beta Notice:</strong> Research prototype for information only; not medical advice. 
+      Real-world validation and co-design with patients/clinicians are active next steps.
+    </p>
+  </section>
 
   <section>
     <h2>App Access</h2>
     <p>
-      <strong>Option 1: Try the App Live:</strong><br>
-      🌐 <a href="https://scdmvp-pu4xhfajmjvtvncuyz2bcw.streamlit.app" target="_blank" rel="noopener noreferrer">Launch Demo</a>
+      <strong>Live on Hugging Face Spaces:</strong><br />
+      🌐 <a href="https://huggingface.co/spaces/olubunmiamoke/scd_mini_pilot" target="_blank" rel="noopener noreferrer">Open the App</a>
     </p>
     <p>
-      <strong>Option 2: Run Locally:</strong><br>
-      🔧 Clone the repo and run <code>streamlit run streamlit_app.py</code> to explore the app.<br>
-      <strong>GitHub Repository:</strong> 
-      <a href="https://github.com/Olubunmi-Amoke/SCD_MVP.git" target="_blank">View Source Code</a>
+      <strong>Run Locally:</strong><br />
+      🔧 Clone the Hugging Face repository and run <code>streamlit run streamlit_app.py</code> to explore the app locally.<br />
+      <strong>Source Code:</strong>
+      <a href="https://huggingface.co/spaces/olubunmiamoke/scd_mini_pilot/tree/main" target="_blank" rel="noopener noreferrer">View Repository</a>
     </p>
   </section>
 
   <section>
     <h2>Screenshots</h2>
-    <img src="assets/screenshots/scd_input_ui_1.jpg" alt="Symptom Entry UI" width="500">
-    <img src="assets/screenshots/scd_input_ui_2.jpg" alt="Symptom Entry UI" width="500">
-    <img src="assets/screenshots/emotion_distribution.jpg" alt="Emotion Distribution" width="500">
-    <img src="assets/screenshots/pain_level_trend.jpg" alt="Pain Level Trend" width="500">
+    <figure>
+      <img src="assets/screenshots/ScreenShot_1.jpg" alt="Log-In Page" width="500" />
+    </figure>
+    <figure>
+      <img src="assets/screenshots/ScreenShot_2.jpg" alt="Log an Entry" width="500" />
+    </figure>
+    <figure>
+      <img src="assets/screenshots/ScreenShot_3.jpg" alt="Insights and Recommendations after submitting an entry (LLM enabled)" width="500" />
+    </figure>
+    <figure>
+      <img src="assets/screenshots/ScreenShot_4.jpg" alt="Record Feedback" width="500" />
+    </figure>
+    <figure>
+      <img src="assets/screenshots/ScreenShot_5.jpg" alt="Dashboard Overview – Pain Level Trend" width="500" />
+    </figure>
+    <figure>
+      <img src="assets/screenshots/ScreenShot_6.jpg" alt="Dashboard Overview – Emotion Distribution" width="500" />
+    </figure>
+    <figure>
+      <img src="assets/screenshots/ScreenShot_7.jpg" alt="Dashboard – Insight Archive" width="500" />
+    </figure>
+    <figure>
+      <img src="assets/screenshots/ScreenShot_8.jpg" alt="Download Log Entries" width="500" />
+    </figure>
+  </section>
+
+  <section>
+    <h2>Changelog</h2>
+    <ul>
+      <li><strong>Aug 26, 2025:</strong> Shifted primary focus to trigger detection + supportive recommendations; removed Azure Health Bot dependency; hosting on Hugging Face Spaces; streamlined charts and added Insight Card UX.</li>
+    </ul>
   </section>
 
   <footer>
