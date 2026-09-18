@@ -705,3 +705,108 @@ code {
     animation-iteration-count: 1 !important;
   }
 }
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.45in;
+  }
+
+  body {
+    background: white;
+    color: #172321;
+    font-size: 9pt;
+  }
+
+  .skip-link,
+  .site-header,
+  .hero-actions,
+  .site-footer {
+    display: none;
+  }
+
+  main {
+    overflow: visible;
+  }
+
+  .page-hero {
+    padding: 0 0 0.24in;
+  }
+
+  .page-hero h1 {
+    max-width: none;
+    margin-bottom: 0.08in;
+    font-size: 25pt;
+  }
+
+  .page-lede {
+    max-width: none;
+    font-size: 10pt;
+  }
+
+  .section,
+  .section.tint {
+    padding: 0;
+    background: white;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .resume-layout {
+    grid-template-columns: 0.68fr 1.32fr;
+    gap: 0.28in;
+  }
+
+  .resume-sidebar {
+    position: static;
+  }
+
+  .resume-block,
+  .card {
+    box-shadow: none;
+  }
+
+  .resume-section + .resume-section {
+    margin-top: 0.22in;
+  }
+
+  .timeline-item {
+    padding-bottom: 0.14in;
+    break-inside: avoid;
+  }
+
+  .timeline-item li + li {
+    margin-top: 0.03in;
+  }
+
+  .role-heading h3,
+  .resume-block h3,
+  .card h3 {
+    font-size: 10pt;
+  }
+
+  .role-heading time {
+    font-size: 7.5pt;
+  }
+
+  .organization,
+  .timeline-item p {
+    margin-bottom: 0.06in;
+  }
+
+  .grid-2 {
+    gap: 0.08in;
+  }
+
+  .card {
+    padding: 0.1in;
+    break-inside: avoid;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
