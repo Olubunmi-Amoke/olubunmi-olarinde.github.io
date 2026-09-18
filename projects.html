@@ -2,103 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects - Olubunmi Olarinde</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected responsible AI, NLP, computer vision, analytics, and cloud machine learning projects by Olubunmi Olarinde.">
+  <title>Projects | Olubunmi Olarinde</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
-    <h1>Selected Projects</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="resume.html">Resume</a> |
-      <a href="scd-diary.html">Smart SCD Diary</a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Olubunmi Olarinde</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="scd-diary.html">SCD Diary</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="project-card">
-    <h2>💊 Smart Sickle Cell Diary App (Capstone)</h2>
-    <p><strong>Objective:</strong> Create an interactive diary app for Sickle Cell Disease patients to track symptoms, emotions, and receive personalized insights using ML/NLP models.</p>
-    <ul>
-      <li>Designed a Streamlit interface for symptom logging and feedback delivery.</li>
-      <li>Built ML models to predict pain/emotion and visualize trends; emphasized ethical AI practices.</li>
-      <li><strong>Tools:</strong> Streamlit, Scikit-Learn, TextBlob, Plotly, Joblib, Python.</li>
-      <li><strong>GitHub:</strong> <a href="https://github.com/Olubunmi-Amoke/SCD_MVP.git" target="_blank">View Repository</a></li>
-      <li><a href="scd-diary.html">View project summary</a></li>
-    </ul>
-  </section>
+  <main id="main">
+    <header class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Selected projects</span>
+        <h1>Ideas tested in the real world.</h1>
+        <p class="page-lede">A collection of work across responsible AI, NLP, computer vision, analytics, and cloud ML—each shaped by a clear problem, deliberate evaluation, and practical delivery.</p>
+      </div>
+    </header>
 
-  <section class="project-card">
-    <h2>🧠 Sentiment Analysis (NLP)</h2>
-    <p><strong>Objective:</strong> Analyze and summarize sentiment trends from customer reviews using vector embeddings and transformer-based NLP models.</p>
-    <ul>
-      <li>Built sentiment classification pipelines with Word2Vec, GloVe, and Sentence Transformers.</li>
-      <li>Fine-tuned a pre-trained transformer to generate weekly summaries and extract key topics, identifying top positive and negative drivers of customer sentiment.</li>
-      <li><strong>Tools:</strong> Python, Scikit-Learn, Gensim, Hugging Face Transformers, Matplotlib.</li>
-      <li><strong>GitHub:</strong> <a href="https://github.com/Olubunmi-Amoke/Sentiment-Analysis.git" target="_blank">View Repository</a></li>
-    </ul>
-  </section>
+    <section class="section tint" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading">Featured work</h2>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-card-body">
+              <div class="project-meta">Responsible health AI · Capstone</div>
+              <h3>Smart Sickle Cell Diary</h3>
+              <p>Designed a Streamlit experience for logging symptoms and emotions, then evolved it from prediction toward trigger detection, cited RAG insights, and supportive recommendations.</p>
+              <ul class="tag-list"><li>Python</li><li>Streamlit</li><li>FAISS</li><li>RAG</li><li>Hugging Face</li></ul>
+              <a class="project-link" href="scd-diary.html">Read the case study →</a>
+            </div>
+          </article>
 
-  <section class="project-card">
-    <h2>🏛️ Landmark Classification (CNNs)</h2>
-    <p><strong>Objective:</strong> Classify images of global landmarks using deep learning and improve model performance through transfer learning.</p>
-    <ul>
-      <li>Improved test accuracy from 41% to 79% using ResNet50 with fine-tuning.</li>
-      <li>Applied image augmentation and co-created modular PyTorch training scripts.</li>
-      <li><strong>Tools:</strong> Python, PyTorch, OpenCV, Pillow.</li>
-      <li><strong>GitHub:</strong> <a href="https://github.com/Olubunmi-Amoke/Landmark_Classification_Project.git" target="_blank">View Repository</a></li>
-    </ul>
-  </section>
+          <article class="project-card">
+            <div class="project-card-body">
+              <div class="project-meta">NLP · Decision support</div>
+              <h3>Stock News Sentiment Analysis</h3>
+              <p>Benchmarked six embedding and tuning variants, then built a quantized Llama pipeline that generated structured weekly summaries of key positive and negative events.</p>
+              <ul class="tag-list"><li>Sentence Transformers</li><li>Gensim</li><li>llama.cpp</li></ul>
+              <a class="project-link" href="https://github.com/Olubunmi-Amoke/Sentiment-Analysis.git" target="_blank" rel="noopener noreferrer">View repository →</a>
+            </div>
+          </article>
 
-  <section class="project-card">
-    <h2>🧁 Scones Unlimited – ML Workflow with AWS</h2>
-    <p><strong>Objective:</strong> Build and deploy an image classification workflow using AWS services.</p>
-    <ul>
-      <li>Packaged and deployed a deep learning model using AWS SageMaker, Lambda, and S3.</li>
-      <li>Implemented monitoring tools for production models using Model Monitor.</li>
-      <li><strong>Tools:</strong> AWS SageMaker, Lambda, Boto3, Python.</li>
-      <li><strong>GitHub:</strong> <a href="https://github.com/Olubunmi-Amoke/SconesUnlimited.git" target="_blank">View Repository</a></li>
-    </ul>
-  </section>
+          <article class="project-card">
+            <div class="project-card-body">
+              <div class="project-meta">Computer vision · Deep learning</div>
+              <h3>Landmark Classification</h3>
+              <p>Improved test accuracy from a 46% scratch-CNN baseline to 80% by fine-tuning ResNet50, then operationalized a tested top-five prediction demo.</p>
+              <ul class="tag-list"><li>PyTorch</li><li>ResNet50</li><li>OpenCV</li><li>pytest</li></ul>
+              <a class="project-link" href="https://github.com/Olubunmi-Amoke/Landmark_Classification_Project.git" target="_blank" rel="noopener noreferrer">View repository →</a>
+            </div>
+          </article>
 
-  <section class="project-card">
-    <h2>🌼 Flower Classification Application</h2>
-    <p><strong>Objective:</strong> Build a deep learning image classifier capable of recognizing different species of flowers using PyTorch and deploy it via command-line interface.</p>
-    <ul>
-      <li>Trained a CNN on the Oxford 102 flower dataset using transfer learning (VGG16).</li>
-      <li>Achieved ~89% accuracy on the test set and deployed with `train.py` and `predict.py` scripts.</li>
-      <li>Performed inference using processed PIL images and plotted top-5 predictions.</li>
-      <li><strong>Tools:</strong> PyTorch, torchvision, matplotlib, PIL, JSON.</li>
-      <li><strong>GitHub:</strong> <a href="https://github.com/Olubunmi-Amoke/Flower-Classifier-Application.git" target="_blank">View Repository</a></li>
-    </ul>
-  </section>
+          <article class="project-card">
+            <div class="project-card-body">
+              <div class="project-meta">Cloud ML · AWS</div>
+              <h3>Scones Unlimited</h3>
+              <p>Built an end-to-end image-classification workflow with serverless orchestration, a real-time SageMaker endpoint, confidence filtering, and inference monitoring.</p>
+              <ul class="tag-list"><li>SageMaker</li><li>Lambda</li><li>Step Functions</li><li>S3</li></ul>
+              <a class="project-link" href="https://github.com/Olubunmi-Amoke/SconesUnlimited.git" target="_blank" rel="noopener noreferrer">View repository →</a>
+            </div>
+          </article>
 
-  <section class="project-card">
-    <h2>💳 Credit Card Churn Prediction</h2>
-    <p><strong>Objective:</strong> Build a classification model to help Thera Bank predict which customers are likely to cancel their credit card accounts and understand the drivers of attrition.</p>
-    <ul>
-      <li>Explored attrition patterns using customer demographics, transaction behaviors, and card usage history.</li>
-      <li>Evaluated multiple models (Bagging, Random Forest, AdaBoost) on original, oversampled, and undersampled data.</li>
-      <li>Hyperparameter tuning via RandomizedSearchCV .</li>
-      <li><strong>Tools:</strong> Python, Scikit-Learn, SMOTE, RandomUnderSampler, Matplotlib, Seaborn.</li>
-      <li><strong>GitHub:</strong> <a href="https://github.com/Olubunmi-Amoke/Credit-Card-Users-Churn-Prediction.git" target="_blank">View Repository</a></li>
-    </ul>
-  </section>
+          <article class="project-card">
+            <div class="project-card-body">
+              <div class="project-meta">Computer vision · CLI product</div>
+              <h3>Flower Classification</h3>
+              <p>Trained a VGG16 transfer-learning classifier on the Oxford 102 dataset, reached approximately 89% test accuracy, and packaged training and prediction workflows for the command line.</p>
+              <ul class="tag-list"><li>PyTorch</li><li>VGG16</li><li>Pillow</li><li>Matplotlib</li></ul>
+              <a class="project-link" href="https://github.com/Olubunmi-Amoke/Flower-Classifier-Application.git" target="_blank" rel="noopener noreferrer">View repository →</a>
+            </div>
+          </article>
 
-  <section class="project-card">
-    <h2>Featured Ethics Capstone Presentation</h2>
-    <p>
-      <strong>“The Model Doesn’t Speak My Pain”</strong><br>
-      A capstone project exploring algorithmic bias in how AI interprets symptoms from marginalized health communities. 
-      Topics include epistemic injustice, participatory design, and ethical NLP in clinical care.
-    </p>
-    <p>
-      🔗 <a href="ethics-scd.html" target="_blank" rel="noopener noreferrer">
-        View full presentation details and materials
-      </a>
-    </p>
-  </section>
-  <footer>
-    <p>&copy; 2025 Olubunmi Olarinde</p>
+          <article class="project-card">
+            <div class="project-card-body">
+              <div class="project-meta">Predictive analytics · Classification</div>
+              <h3>Credit Card Churn Prediction</h3>
+              <p>Evaluated ensemble models across original, oversampled, and undersampled data to identify attrition risk and the behavioral drivers behind customer churn.</p>
+              <ul class="tag-list"><li>Scikit-learn</li><li>SMOTE</li><li>Random Forest</li><li>Seaborn</li></ul>
+              <a class="project-link" href="https://github.com/Olubunmi-Amoke/Credit-Card-Users-Churn-Prediction.git" target="_blank" rel="noopener noreferrer">View repository →</a>
+            </div>
+          </article>
+
+          <article class="project-card featured">
+            <div class="project-card-body">
+              <div class="project-meta">Ethics · Clinical NLP</div>
+              <h3>The Model Doesn’t Speak My Pain</h3>
+              <p>An ethics capstone examining how language models can misread pain expression in marginalized health communities—and how epistemic justice, participatory design, and transparency can guide better systems.</p>
+              <ul class="tag-list"><li>Responsible AI</li><li>Clinical NLP</li><li>Participatory design</li></ul>
+              <a class="project-link" href="ethics-scd.html">Explore the presentation →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner"><p>&copy; 2026 Olubunmi Olarinde</p><a href="mailto:onadipeolubunmi@gmail.com">Get in touch</a></div>
   </footer>
 </body>
 </html>
